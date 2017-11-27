@@ -1,0 +1,92 @@
+<br>
+<br>
+<br>
+<div class="container" *ngIf="formu">
+  
+  <form (ngSubmit)="onLogin(login,pass)" #loginForm="ngForm">
+
+
+
+
+    <div class="col-md-6 col-md-offset-3">
+      <div class="row">
+        <h3>
+          <B>
+          <div class="col-xs-4">          
+          <div class="form-group" [ngClass]="{'has-error': login.invalid && login.dirty}">
+          <label for="login" class="control-label">Username(*)</label>
+          </div>
+          </div>
+      </B>
+        </h3>
+        <div class="col-xs-6">
+
+          <input type="text" mdInput placeholder="USERNAME" name="login" class="form-control" [(ngModel)]="formu.login" #login="ngModel"
+            required>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row">
+        <h3>
+          <B>
+      <div class="col-xs-4">
+        <div class="form-group" [ngClass]="{'has-error': pass.invalid && pass.dirty}">
+          <label for="pass" class="control-label">Password(*)</label>
+        </div>
+      </div>
+    </B>
+        </h3>
+        <div class="col-xs-6">
+          <input type="password" mdInput placeholder="PASSWORD" name="pass" class="form-control" [(ngModel)]="formu.pass" #pass="ngModel"
+            required>
+
+        </div>
+      </div>
+      <br>
+
+      <div align="center" *ngIf="login.invalid && login.dirty" class="text-danger">
+        Username is required
+      </div>
+      <div align="center" *ngIf="pass.invalid && pass.dirty" class="text-danger">
+        Password is required
+      </div>
+      <button class="btn btn-primary center-block">Login</button>
+
+
+      <br>
+    </div>
+    <!-- 
+    <pre>
+      login.touched:{{login.touched}}
+      login.dirty:{{login.dirty}}
+      login.valid:{{login.valid}}
+
+    </pre>
+    <pre>
+      pass.touched:{{pass.touched}}
+      pass.dirty:{{login.dirty}}
+      pass.valid:{{login.valid}}
+
+    </pre> -->
+
+    <input type="text" ng-model="formu.login" name="login" ng-pattern="/^[a-zA-Z]*$/">
+
+
+    <pre>
+      Form.touched: {{loginForm.form.touched}}
+ Form.untouched: {{loginForm.form.untouched}}
+ Form.dirty: {{loginForm.form.dirty}}
+ Form.pristine: {{loginForm.form.pristine}}
+ Form.valid: {{loginForm.form.valid}}
+ Form.invalid: {{loginForm.form.invalid}}    
+    
+   
+  </pre>
+
+    <br>
+    <br>
+  </form>

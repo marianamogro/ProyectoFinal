@@ -1,0 +1,46 @@
+
+<br>
+<br>
+<br>
+<!-- <form (ngSubmit)="onLogin()" #loginForm="ngForm"> -->
+<form (ngSubmit)="onLogin()" #loginForm="ngForm">
+<div class="col-md-6 col-md-offset-3">
+
+  <div class="row">
+    <h3><B><div class="col-xs-4">Username (*)</div></B></h3>
+    <div class="col-xs-6">
+      <input type="text" mdInput placeholder="USER NAME">
+    </div>
+
+  </div>
+
+  <div class="row">
+    <h3><B>
+      <div class="col-xs-4">Password (*)
+      </div>
+    </B></h3>
+    <div class="col-xs-6">
+      <input type="password" mdInput placeholder="PASSWORD">
+    </div>
+  </div>
+  <br>
+  <button mat-button color="primary">Primary</button>
+  <button mat-raised-button>Basic</button>
+  <button mat-raised-button color="primary">Sign in</button>
+  <button (click)="onLogin()">Click me!</button>
+  <br>
+</div>
+
+    <pre>
+      Form.touched: {{loginForm.form.touched}}
+ Form.untouched: {{loginForm.form.untouched}}
+ Form.dirty: {{loginForm.form.dirty}}
+ Form.pristine: {{loginForm.form.pristine}}
+ Form.valid: {{loginForm.form.valid}}
+ Form.invalid: {{loginForm.form.invalid}}
+    </pre>
+
+<br>
+<br>
+</form>
+
