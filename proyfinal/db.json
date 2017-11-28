@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "firstName": "Luis",
+      "lastName": "Aviles",
+      "street": "Av. Santa Cruz",
+      "city": "Cochabamba",
+      "gender": "male",
+      "email": "mariana.mogro@gmail.com",
+      "pictureURL": "https://image.flaticon.com/sprites/categories/84-amor-y-romance.png"
+    },
+    {
+      "id": 3,
+      "firstName": "Walter",
+      "lastName": "Quiroz"
+    },
+    {
+      "firstName": "Walter",
+      "lastName": "Mogro",
+      "id": 4
+    },
+    {
+      "firstName": "Reynaldo",
+      "lastName": "Quiroz",
+      "id": 5
+    },
+    {
+      "firstName": "Mariana",
+      "lastName": "Mogro",
+      "street": "Jose Antonio Arce",
+      "city": "Cochabamba",
+      "gender": "female",
+      "email": "mariana.mogro@gmail.com",
+      "pictureURL": "https://image.flaticon.com/sprites/categories/84-amor-y-romance.png",
+      "id": 6
+    }
+  ]
+}

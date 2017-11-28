@@ -15,7 +15,7 @@ formu: any={};
   onLogin(username,password){
     if(username.value =="test" && password.value=="test"){
       
-      this._router.navigate(['lista']);             
+      this._router.navigate(['dashboard']);             
     }
     else
       {

@@ -1,0 +1,19 @@
+<p>
+  dashboard works!
+</p>
+<mat-list *ngFor=  "let user of users">
+ 
+   [userParam]="user"
+    <h4 mat-line> {{userParam.login}} </h4>
+    <p mat-line>{{userParam.pass}}</p>
+</mat-list>
+
+
+<!-- <mat-list-item > 
+
+    
+    <h4 mat-line> {{userParam.login}} </h4>
+    <p mat-line>{{userParam.pass}}</p>
+  </mat-list-item> -->
+
+  <!-- (click)="onClick(movieParam)"  -->
