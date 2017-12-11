@@ -21,7 +21,13 @@
         </h3>
         <div class="col-xs-6">
 
-          <input type="text" mdInput placeholder="USERNAME" name="login" class="form-control" [(ngModel)]="formu.login" #login="ngModel"
+          <input type="text" 
+                mdInput placeholder="USERNAME" 
+                name="login" 
+                class="form-control" 
+                [(ngModel)]="formu.login" #login="ngModel"
+                pattern=
+                "[A-Za-z0-9_]{1,20}"
             required>
 
         </div>
@@ -41,19 +47,27 @@
     </B>
         </h3>
         <div class="col-xs-6">
-          <input type="password" mdInput placeholder="PASSWORD" name="pass" class="form-control" [(ngModel)]="formu.pass" #pass="ngModel"
+          <input type="password" 
+                 mdInput placeholder="PASSWORD" 
+                 name="pass" class="form-control" 
+                 [(ngModel)]="formu.pass" #pass="ngModel"
+                 pattern="[A-Za-z0-9_]{1,20}"
             required>
 
         </div>
       </div>
       <br>
 
-      <div align="center" *ngIf="login.invalid && login.dirty" class="text-danger">
-        Username is required
+      <div align="center" *ngIf="login.invalid && login.dirty || pass.invalid && pass.dirty" class="text-danger">
+        Username or Password is invalid
+        <p>
+        <a href="http://slides.com/luixaviles/angular#/26/3">Forgot Email? &nbsp;&nbsp;</a>
+        <a href="https://material.angular.io/components/input/overview">More Options</a>
+        </p>
+
+        
       </div>
-      <div align="center" *ngIf="pass.invalid && pass.dirty" class="text-danger">
-        Password is required
-      </div>
+      
       <button class="btn btn-primary center-block">Login</button>
 
 
@@ -73,10 +87,10 @@
 
     </pre> -->
 
-    <input type="text" ng-model="formu.login" name="login" ng-pattern="/^[a-zA-Z]*$/">
+   
 
 
-    <pre>
+    <!-- <pre>
       Form.touched: {{loginForm.form.touched}}
  Form.untouched: {{loginForm.form.untouched}}
  Form.dirty: {{loginForm.form.dirty}}
@@ -85,7 +99,7 @@
  Form.invalid: {{loginForm.form.invalid}}    
     
    
-  </pre>
+  </pre> -->
 
     <br>
     <br>

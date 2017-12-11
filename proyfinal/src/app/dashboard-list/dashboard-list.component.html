@@ -1,0 +1,34 @@
+<div class="col-xs-12 col-sm-6 col-md-4" (click)="onClick(userParam)">
+  <div class="card">
+
+    <div class="col-sm-6">
+      <div class="card-block">
+        <!-- <img class="card-img left-block " src="" alt="Bakery"> -->
+        <img class="img-responsive" [src]="userParam.pictureURL" > 
+        <img a-n *ngIf="!userParam.pictureURL" class="img-responsive" [src]="defaultPicture">
+         
+        
+      </div>
+    </div>
+    
+    <div class="col-sm-6">
+      <div class="card-block" >
+        
+        <h4 class="card-title">{{userParam.firstName}} {{userParam.lastName}}</h4>
+        <p class="card-text">{{userParam.gender}}</p>
+        <p class="card-text">{{userParam.street}}</p>
+       
+         <button class="btn btn-danger" (click)="onDelete(userParam.id)">DELETE</button> 
+      
+         <a ><button class="btn btn-primary" (click)="onClickEdit(userParam.id)">EDIT</button></a> 
+         
+       
+        
+
+           <!-- (click)="onClickEdit(userParam.id)"  -->
+        <br>
+      </div>
+    </div>
+  </div>
+
+</div>
